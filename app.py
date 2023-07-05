@@ -43,7 +43,7 @@ json_data = download_google_drive_json_file(creds_id_google_drive)
 
 @app.route('/init', methods=['GET'])
 def init():
-    global stages, config, tp
+    global stages, config, tp, ag
     stages = GoogleSheetDataFrame(json_data, document_key, stages_sheet)
     config = GoogleSheetDataFrame(json_data, document_key, config_sheet)
     initConfig(config)
