@@ -35,7 +35,7 @@ class AnswerGenerator:
         next_stage_crit_satis = self.stages.at[cs["stage"], "Выполнено"]
         next_stage_crit_notf = self.stages.at[cs["stage"], "Не выполнено"]
         
-        print(f'{crit=} {next_stage_crit_satis =} {next_stage_crit_notf =}')
+        # print(f'{crit=} {next_stage_crit_satis =} {next_stage_crit_notf =}')
         if is_json_string(crit):
             result = text_processing(crit, query)
             if len(list(result.values())[0]):
