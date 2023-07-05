@@ -37,8 +37,8 @@ class AnswerGenerator:
         
         # print(f'{crit=} {next_stage_crit_satis =} {next_stage_crit_notf =}')
         if is_json_string(crit):
-            result = text_processing(crit, query)
-            if len(list(result.values())[0]):
+            findCrit = text_processing(crit, query)
+            if len(list(findCrit.values())[0]):
                 text = self.stages.at[int(next_stage_crit_satis)-2, "Текст"]
                 cs["stage"] = int(next_stage_crit_satis)-2
             else:
